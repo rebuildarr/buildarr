@@ -77,7 +77,7 @@ class ConfigBase(BaseModel, Generic[Secrets]):
         """
         fields: Dict[str, ConfigBase] = {}
         for field_name, field in cls.model_fields.items():
-            if issubclass(field.annotation, ConfigBase):
+            if isinstance(field.annotation, type) and issubclass(field.annotation, ConfigBase):
                 fields[field_name] = field.annotation.from_remote(secrets)
         return cls(**fields)
 

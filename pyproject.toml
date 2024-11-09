@@ -48,7 +48,7 @@ dependencies = [
     "typing-extensions>=4.0.1",
     "watchdog>=3.0.0",
 ]
-dynamic = ["version"]
+version = "0.8.0"
 
 [project.urls]
 Homepage = "https://buildarr.github.io"
@@ -191,3 +191,11 @@ required-imports = ["from __future__ import annotations"]
 [tool.mypy]
 python_version = "3.8"
 pretty = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true

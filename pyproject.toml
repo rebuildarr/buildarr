@@ -48,7 +48,7 @@ dependencies = [
     "typing-extensions>=4.0.1",
     "watchdog>=3.0.0",
 ]
-version = "0.8.0"
+version = "0.8.1"
 
 [project.urls]
 Homepage = "https://buildarr.github.io"
